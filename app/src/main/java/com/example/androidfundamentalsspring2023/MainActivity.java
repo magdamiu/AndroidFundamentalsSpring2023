@@ -3,22 +3,28 @@ package com.example.androidfundamentalsspring2023;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.webkit.URLUtil;
 import android.webkit.WebView;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     // snake case => constante in Java si res files si valori
     // camila cu o cocoasa => nume de metode si campuri (variabile de context sau clasa)
     // camila cu doua cocoase => nume de clase
 
     protected static final String URL_ANDROID = "https://www.android.com/";
+    private static final String ACTIVITY = "MainActivity";
     private WebView webViewSample;
     private Spinner spinnerPlanets;
+
+    private List<String> dataSourcePlanets;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
         webViewSample.loadUrl(URL_ANDROID);
 
         spinnerPlanets = findViewById(R.id.spinnerPlanets);
+        spinnerPlanets.setOnItemSelectedListener(this);
         populateSpinner();
     }
 
@@ -39,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
     // step 4: set the adapter to the Spinner
 
     private void populateSpinner() {
-        List<String> dataSourcePlanets = getPlanets();
+        dataSourcePlanets = getPlanets();
         ArrayAdapter<String> adapterForPlanets = getPlanetsAdapter(dataSourcePlanets);
         spinnerPlanets.setAdapter(adapterForPlanets);
     }
@@ -62,4 +69,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        String selectedPlanet = dataSourcePlanets.get(position);
+        Log.e(ACTIVITY, selectedPlanet);
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }
