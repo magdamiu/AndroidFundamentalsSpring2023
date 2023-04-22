@@ -1,4 +1,9 @@
 <resources>
     <string name="app_name">AndroidFundamentalsSpring2023</string>
     <string name="hello_world">Hello, hello World!</string>
+    <string name="login">Login</string>
+    <string name="please_add_your_email_address">Please add your email address</string>
+    <string name="i_agree_to_receive_your_newsletter">I agree to receive your newsletter</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 </resources>
