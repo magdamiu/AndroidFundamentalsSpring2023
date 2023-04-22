@@ -117,7 +117,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="32dp"
                 android:layout_gravity="center"
-                android:background="@color/white"/>
+                android:background="@color/white" />
         </FrameLayout>
+
+        <WebView
+            android:id="@+id/webViewAndroid"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/small_space"
+            tools:ignore="WebViewLayout" />
     </LinearLayout>
 </ScrollView>
