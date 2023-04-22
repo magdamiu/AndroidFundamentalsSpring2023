@@ -120,11 +120,19 @@
                 android:background="@color/white" />
         </FrameLayout>
 
+        <Spinner
+            android:id="@+id/spinnerPlanets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_space"
+            android:prompt="@string/planets" />
+
         <WebView
             android:id="@+id/webViewAndroid"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/small_space"
             tools:ignore="WebViewLayout" />
+
     </LinearLayout>
 </ScrollView>

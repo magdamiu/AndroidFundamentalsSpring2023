@@ -5,6 +5,11 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.URLUtil;
 import android.webkit.WebView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     // snake case => constante in Java si res files si valori
@@ -13,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
     protected static final String URL_ANDROID = "https://www.android.com/";
     private WebView webViewSample;
+    private Spinner spinnerPlanets;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,5 +29,37 @@ public class MainActivity extends AppCompatActivity {
         webViewSample.getSettings().setJavaScriptEnabled(true);
         webViewSample.loadUrl(URL_ANDROID);
 
+        spinnerPlanets = findViewById(R.id.spinnerPlanets);
+        populateSpinner();
     }
+
+    // step 1: add the Spinner in the xml - DONE
+    // step 2: get the data source (list of strings -> list of planets) - DONE
+    // step 3: create the default adapter - DONE
+    // step 4: set the adapter to the Spinner
+
+    private void populateSpinner() {
+        List<String> dataSourcePlanets = getPlanets();
+        ArrayAdapter<String> adapterForPlanets = getPlanetsAdapter(dataSourcePlanets);
+        spinnerPlanets.setAdapter(adapterForPlanets);
+    }
+    private List<String> getPlanets() {
+        List<String> planets = new ArrayList<>();
+        planets.add("Earth");
+        planets.add("Mars");
+        planets.add("Venus");
+        planets.add("Jupiter");
+        planets.add("Saturn");
+        planets.add("Pluto");
+        planets.add("Uranus");
+        planets.add("Neptune");
+        planets.add("Mercury");
+        return planets;
+    }
+
+    private ArrayAdapter<String> getPlanetsAdapter(List<String> planets) {
+        return new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, planets);
+    }
+
+
 }
