@@ -6,4 +6,7 @@
     <string name="i_agree_to_receive_your_newsletter">I agree to receive your newsletter</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="turn">Turn</string>
+    <string name="off">Off</string>
+    <string name="on">On</string>
 </resources>
