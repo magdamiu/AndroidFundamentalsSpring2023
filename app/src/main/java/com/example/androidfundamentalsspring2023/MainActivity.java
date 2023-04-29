@@ -6,12 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
-import android.webkit.URLUtil;
 import android.webkit.WebView;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Toast;
+
+import com.example.androidfundamentalsspring2023.activities.Activity1;
+import com.example.androidfundamentalsspring2023.recyclerview.PlanetsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         ArrayAdapter<String> adapterForPlanets = getPlanetsAdapter(dataSourcePlanets);
         spinnerPlanets.setAdapter(adapterForPlanets);
     }
+
     private List<String> getPlanets() {
         List<String> planets = new ArrayList<>();
         planets.add("Earth");
@@ -84,6 +86,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public void openPlanetsOnClick(View view) {
         Intent intent = new Intent(MainActivity.this, PlanetsActivity.class);
+        startActivity(intent);
+    }
+
+    public void openActivity1OnClick(View view) {
+        Intent intent = new Intent(MainActivity.this, Activity1.class);
         startActivity(intent);
     }
 }

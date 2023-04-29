@@ -1,4 +1,4 @@
-package com.example.androidfundamentalsspring2023;
+package com.example.androidfundamentalsspring2023.recyclerview;
 
 public class Planet {
 

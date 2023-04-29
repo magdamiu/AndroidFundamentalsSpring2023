@@ -1,10 +1,12 @@
-package com.example.androidfundamentalsspring2023;
+package com.example.androidfundamentalsspring2023.recyclerview;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
+
+import com.example.androidfundamentalsspring2023.R;
 
 import java.util.ArrayList;
 import java.util.List;

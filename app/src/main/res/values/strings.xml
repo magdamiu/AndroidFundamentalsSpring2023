@@ -10,4 +10,8 @@
     <string name="off">Off</string>
     <string name="on">On</string>
     <string name="planets">planets</string>
+    <string name="open_activity1">Open Activity1</string>
+    <string name="dial_action">Dial Action</string>
+    <string name="open_url">Open URL</string>
+    <string name="open_location">Open Location</string>
 </resources>

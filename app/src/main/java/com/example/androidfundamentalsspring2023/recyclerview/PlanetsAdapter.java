@@ -1,6 +1,5 @@
-package com.example.androidfundamentalsspring2023;
+package com.example.androidfundamentalsspring2023.recyclerview;
 
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -8,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.androidfundamentalsspring2023.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
