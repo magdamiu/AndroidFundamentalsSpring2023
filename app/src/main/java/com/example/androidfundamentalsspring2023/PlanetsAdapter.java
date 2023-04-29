@@ -8,6 +8,8 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class PlanetsAdapter extends RecyclerView.Adapter<PlanetViewHolder> {
@@ -30,8 +32,13 @@ public class PlanetsAdapter extends RecyclerView.Adapter<PlanetViewHolder> {
         Planet currentPlanet = planets.get(position);
         holder.getTextViewPlanetName().setText(currentPlanet.getName());
         holder.getTextViewPlanetColor().setText(currentPlanet.getColor());
-        //TODO  image with Picasso
-        holder.getItemPlanet().setBackgroundResource(R.color.black);
+        holder.getItemPlanet().setBackgroundResource(R.color.white);
+        if (currentPlanet.getUrlImage() != null & currentPlanet.getUrlImage().length() > 0) {
+            Picasso.get().load(currentPlanet.getUrlImage())
+                    .placeholder(R.drawable.android)
+                    .error(R.drawable.close)
+                    .into(holder.getImageViewPlanet());
+        }
     }
 
     @Override

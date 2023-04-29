@@ -3,10 +3,10 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:gravity="center_vertical"
-    android:id="@+id/itemPlanet"
-    android:orientation="vertical">
+    android:id="@+id/itemPlanet">
 
     <ImageView
+        android:layout_marginRight="@dimen/small_space"
         android:id="@+id/imageViewPlanet"
         android:layout_width="64dp"
         android:layout_height="64dp" />

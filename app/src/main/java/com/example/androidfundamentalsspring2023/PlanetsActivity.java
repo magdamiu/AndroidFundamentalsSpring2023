@@ -39,11 +39,11 @@ public class PlanetsActivity extends AppCompatActivity {
 
     private void populatePlanets() {
         planets = new ArrayList<>();
-        planets.add(new Planet("Earth", "Blue", ""));
-        planets.add(new Planet("Mars", "Red", ""));
-        planets.add(new Planet("Pluto", "Blue", ""));
-        planets.add(new Planet("Saturn", "Blue", ""));
-        planets.add(new Planet("Uranus", "Blue", ""));
+        planets.add(new Planet("Earth", "Blue", "https://cdn-icons-png.flaticon.com/512/2240/2240692.png"));
+        planets.add(new Planet("Mars", "Red", "https://cdn-icons-png.flaticon.com/512/2530/2530892.png"));
+        planets.add(new Planet("Pluto", "Blue", "https://cdn-icons-png.flaticon.com/512/2534/2534297.png"));
+        planets.add(new Planet("Saturn", "Blue", "https://cdn-icons-png.flaticon.com/512/1751/1751904.png"));
+        planets.add(new Planet("Uranus", "Blue", "https://cdn-icons-png.flaticon.com/512/6989/6989438.png"));
         planets.add(new Planet("Neptune", "Blue", ""));
         planets.add(new Planet("Mercury", "Grey", ""));
         planets.add(new Planet("Jupiter", "Brown", ""));
