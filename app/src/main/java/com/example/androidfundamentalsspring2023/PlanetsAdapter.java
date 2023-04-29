@@ -31,6 +31,7 @@ public class PlanetsAdapter extends RecyclerView.Adapter<PlanetViewHolder> {
         holder.getTextViewPlanetName().setText(currentPlanet.getName());
         holder.getTextViewPlanetColor().setText(currentPlanet.getColor());
         //TODO  image with Picasso
+        holder.getItemPlanet().setBackgroundResource(R.color.black);
     }
 
     @Override
