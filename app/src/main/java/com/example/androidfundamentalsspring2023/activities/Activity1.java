@@ -18,6 +18,7 @@ public class Activity1 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_1);
         Log.e(ACTIVITY_1, "onCreate");
+        sampleForDebug();
     }
 
     @Override
@@ -77,5 +78,14 @@ public class Activity1 extends AppCompatActivity {
         Intent intent = new Intent(Intent.ACTION_VIEW);
         intent.setData(Uri.parse("geo:0,0?q=1600+Amphitheatre+Parkway%2C+CA"));
         startActivity(intent);
+    }
+
+    private int sampleForDebug() {
+        int a = 6, b = 8, c = 12;
+        int sum = 1; // initially was 0 to show that we get an exception that should be debugged
+        int diff = c - a;
+        int div = b / sum;
+        sum = a + b + c;
+        return diff + div + sum;
     }
 }
