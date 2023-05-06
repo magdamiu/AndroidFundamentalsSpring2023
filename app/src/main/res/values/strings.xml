@@ -14,4 +14,6 @@
     <string name="dial_action">Dial Action</string>
     <string name="open_url">Open URL</string>
     <string name="open_location">Open Location</string>
+    <string name="name">Name</string>
+    <string name="send">Send</string>
 </resources>

@@ -7,11 +7,17 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 
 import com.example.androidfundamentalsspring2023.R;
 
 public class Activity1 extends AppCompatActivity {
     private static final String ACTIVITY_1 = "Activity1";
+    protected static final String INFO = "info";
+
+    private EditText editTextInfo;
+    private Button buttonSendInfo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +25,20 @@ public class Activity1 extends AppCompatActivity {
         setContentView(R.layout.activity_1);
         Log.e(ACTIVITY_1, "onCreate");
         sampleForDebug();
+
+        editTextInfo = findViewById(R.id.editTextInfo);
+        buttonSendInfo = findViewById(R.id.buttonSendInfo);
+        buttonSendInfo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String info = editTextInfo.getText().toString();
+                if(!info.isEmpty()) {
+                    Intent intent = new Intent(Activity1.this, Activity2.class);
+                    intent.putExtra(INFO, info);
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     @Override
