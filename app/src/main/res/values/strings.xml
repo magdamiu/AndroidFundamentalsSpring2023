@@ -16,4 +16,5 @@
     <string name="open_location">Open Location</string>
     <string name="name">Name</string>
     <string name="send">Send</string>
+    <string name="get_github_users">Get Github Users</string>
 </resources>

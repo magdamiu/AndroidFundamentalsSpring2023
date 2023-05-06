@@ -28,6 +28,12 @@
                 android:layout_height="wrap_content"
                 android:onClick="openActivity1OnClick"
                 android:text="@string/open_activity1" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="openGithubActivityOnClick"
+                android:text="@string/get_github_users" />
         </LinearLayout>
 
 
