@@ -16,6 +16,7 @@ import android.widget.Spinner;
 
 import com.example.androidfundamentalsspring2023.activities.Activity1;
 import com.example.androidfundamentalsspring2023.fragments.BlankFragment;
+import com.example.androidfundamentalsspring2023.fragments.NavigationActivity;
 import com.example.androidfundamentalsspring2023.recyclerview.PlanetsActivity;
 import com.example.androidfundamentalsspring2023.retrofit.GithubActivity;
 
@@ -117,6 +118,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public void openGithubActivityOnClick(View view) {
         Intent intent = new Intent(MainActivity.this, GithubActivity.class);
+        startActivity(intent);
+    }
+
+    public void openNavigationDrawerOnClick(View view) {
+        Intent intent = new Intent(MainActivity.this, NavigationActivity.class);
         startActivity(intent);
     }
 }

@@ -15,6 +15,11 @@
         android:theme="@style/Theme.AndroidFundamentalsSpring2023"
         tools:targetApi="31">
         <activity
+            android:name=".fragments.NavigationActivity"
+            android:exported="false"
+            android:label="@string/title_activity_navigation"
+            android:theme="@style/Theme.AndroidFundamentalsSpring2023.NoActionBar" />
+        <activity
             android:name=".retrofit.GithubActivity"
             android:exported="false" />
         <activity

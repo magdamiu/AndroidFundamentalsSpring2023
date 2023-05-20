@@ -6,4 +6,13 @@
     </style>
 
     <style name="Theme.AndroidFundamentalsSpring2023" parent="Base.Theme.AndroidFundamentalsSpring2023" />
+
+    <style name="Theme.AndroidFundamentalsSpring2023.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.AndroidFundamentalsSpring2023.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.AndroidFundamentalsSpring2023.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
