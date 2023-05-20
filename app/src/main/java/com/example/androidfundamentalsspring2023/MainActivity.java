@@ -1,6 +1,9 @@
 package com.example.androidfundamentalsspring2023;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +15,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.example.androidfundamentalsspring2023.activities.Activity1;
+import com.example.androidfundamentalsspring2023.fragments.BlankFragment;
 import com.example.androidfundamentalsspring2023.recyclerview.PlanetsActivity;
 import com.example.androidfundamentalsspring2023.retrofit.GithubActivity;
 
@@ -42,6 +46,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinnerPlanets = findViewById(R.id.spinnerPlanets);
         spinnerPlanets.setOnItemSelectedListener(this);
         populateSpinner();
+
+        addFragmentInDynamicMode(R.id.placeholderFragments, BlankFragment.newInstance("Dynamic Sample", ""));
+    }
+
+    private void addFragmentInDynamicMode(int placeholderId, Fragment fragment) {
+        // get the FragmentManager
+        FragmentManager fragmentManager = getSupportFragmentManager();
+
+        // define the transaction
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+
+        // replace placeholder with the Fragment
+        fragmentTransaction.replace(placeholderId, fragment);
+
+        // commit transaction
+        fragmentTransaction.commit();
     }
 
     // step 1: add the Spinner in the xml - DONE
