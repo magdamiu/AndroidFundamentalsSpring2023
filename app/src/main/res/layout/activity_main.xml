@@ -13,15 +13,15 @@
         android:orientation="vertical">
 
         <LinearLayout
-            android:padding="@dimen/small_space"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:padding="@dimen/small_space">
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:onClick="openPlanetsOnClick"
-                 android:text="@string/planets" />
+                android:text="@string/planets" />
 
             <Button
                 android:layout_width="wrap_content"
@@ -36,6 +36,11 @@
                 android:text="@string/get_github_users" />
         </LinearLayout>
 
+        <fragment
+            android:id="@+id/fragmentBlank"
+            android:name="com.example.androidfundamentalsspring2023.fragments.BlankFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
         <TextView
             android:layout_width="wrap_content"

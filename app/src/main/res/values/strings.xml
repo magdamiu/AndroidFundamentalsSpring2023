@@ -17,4 +17,7 @@
     <string name="name">Name</string>
     <string name="send">Send</string>
     <string name="get_github_users">Get Github Users</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="this_is_an_edittext">This is an EditText</string>
 </resources>
