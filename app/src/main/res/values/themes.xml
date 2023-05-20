@@ -15,4 +15,15 @@
     <style name="Theme.AndroidFundamentalsSpring2023.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="Theme.AndroidFundamentalsSpring2023.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+
+    <style name="LargeFont">
+        <item name="android:textSize">28sp</item>
+    </style>
+
+    <style name="LargeBlueFont" parent="@style/LargeFont">
+        <item name="android:textColor">#00BFFF</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

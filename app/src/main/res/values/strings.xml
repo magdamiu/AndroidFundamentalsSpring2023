@@ -33,4 +33,5 @@
     <string name="menu_slideshow">Slideshow</string>
     <string name="start_navigationdrawer">Start NavigationDrawer</string>
     <string name="hello_i_am_in_a_cardview">Hello! I am in a CardView</string>
+    <string name="sample_with_styles">Sample with Styles</string>
 </resources>
