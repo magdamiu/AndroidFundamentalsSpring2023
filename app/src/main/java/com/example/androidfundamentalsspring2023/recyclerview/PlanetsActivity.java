@@ -4,8 +4,12 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
 
+import com.example.androidfundamentalsspring2023.MainActivity;
 import com.example.androidfundamentalsspring2023.R;
 
 import java.util.ArrayList;
@@ -23,11 +27,32 @@ public class PlanetsActivity extends AppCompatActivity {
         recyclerViewPlanets = findViewById(R.id.recyclerViewPlanets);
         populatePlanets();
         setupRecyclerView();
+        handleRecyclerViewItemClick();
     }
 
     private void setupRecyclerView() {
         recyclerViewPlanets.setLayoutManager(new LinearLayoutManager(this));
         recyclerViewPlanets.setAdapter(new PlanetsAdapter(planets));
+    }
+
+    private void handleRecyclerViewItemClick() {
+        recyclerViewPlanets.addOnItemTouchListener(new RecyclerTouchListener(this, recyclerViewPlanets, new ClickListener() {
+            @Override
+            public void onClick(View view, final int position) {
+                Toast.makeText(PlanetsActivity.this, "Single Click on position:" + position,
+                        Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+                Toast.makeText(PlanetsActivity.this, "Long press on position:" + position,
+                        Toast.LENGTH_LONG).show();
+                // here you could also start a new activity with Intent
+                // and pass the id of the current selected object using putExtra (Bundle)
+                Planet currentPlanet = planets.get(position);
+                // currentPlanet.getId();
+            }
+        }));
     }
 
     // The Plan
