@@ -16,7 +16,6 @@
 
     <style name="Theme.AndroidFundamentalsSpring2023.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-
     <style name="LargeFont">
         <item name="android:textSize">28sp</item>
     </style>

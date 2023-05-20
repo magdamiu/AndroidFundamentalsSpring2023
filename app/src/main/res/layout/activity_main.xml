@@ -34,6 +34,8 @@
                 android:layout_height="wrap_content"
                 android:onClick="openGithubActivityOnClick"
                 android:text="@string/get_github_users" />
+
+
         </LinearLayout>
 
         <fragment
@@ -50,20 +52,26 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/start_navigationdrawer"
-            android:onClick="openNavigationDrawerOnClick"/>
+            android:onClick="openNavigationDrawerOnClick"
+            android:text="@string/start_navigationdrawer" />
 
         <TextView
             style="@style/LargeFont"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sample_with_styles"/>
+            android:text="@string/sample_with_styles" />
 
         <TextView
             style="@style/LargeBlueFont"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/sample_with_styles"/>
+            android:text="@string/sample_with_styles" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="openRoomActivityOnClick"
+            android:text="@string/room" />
 
         <TextView
             android:layout_width="wrap_content"

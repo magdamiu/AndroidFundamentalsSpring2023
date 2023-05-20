@@ -34,4 +34,7 @@
     <string name="start_navigationdrawer">Start NavigationDrawer</string>
     <string name="hello_i_am_in_a_cardview">Hello! I am in a CardView</string>
     <string name="sample_with_styles">Sample with Styles</string>
+    <string name="insert_a_word">Insert a word</string>
+    <string name="room">Room</string>
+    <string name="add_word">Add Word</string>
 </resources>

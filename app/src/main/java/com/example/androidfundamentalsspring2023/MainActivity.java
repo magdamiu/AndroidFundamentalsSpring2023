@@ -19,6 +19,7 @@ import com.example.androidfundamentalsspring2023.fragments.BlankFragment;
 import com.example.androidfundamentalsspring2023.fragments.NavigationActivity;
 import com.example.androidfundamentalsspring2023.recyclerview.PlanetsActivity;
 import com.example.androidfundamentalsspring2023.retrofit.GithubActivity;
+import com.example.androidfundamentalsspring2023.room.WordsActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -123,6 +124,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public void openNavigationDrawerOnClick(View view) {
         Intent intent = new Intent(MainActivity.this, NavigationActivity.class);
+        startActivity(intent);
+    }
+
+    public void openRoomActivityOnClick(View view) {
+        Intent intent = new Intent(MainActivity.this, WordsActivity.class);
         startActivity(intent);
     }
 }
